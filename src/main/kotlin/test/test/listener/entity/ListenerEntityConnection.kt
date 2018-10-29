@@ -13,6 +13,7 @@ class ListenerEntityConnection : Listener {
     fun onJoin(event: PlayerJoinEvent) {
         event.joinMessage = null
         val player = event.player
+        player.inventory.clear()
         val user = User(player)
         user.clearContents()
         user.setHotbar()

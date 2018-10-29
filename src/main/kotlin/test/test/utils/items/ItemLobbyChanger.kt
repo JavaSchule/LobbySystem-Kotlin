@@ -5,15 +5,15 @@ import org.bukkit.Material
 import org.bukkit.inventory.ItemStack
 import test.test.provider.HotbarItem
 
-class ItemCompass : HotbarItem {
+class ItemLobbyChanger : HotbarItem {
 
     override fun build(): ItemStack {
-        val itemBuilder: ItemBuilder = ItemBuilder(Material.COMPASS)
-        itemBuilder.setDisplayName("§bNavigator")
+        val itemBuilder = ItemBuilder(Material.NETHER_STAR)
+        itemBuilder.setDisplayName("§bLobbys")
         return itemBuilder.build()
     }
 
     override fun getSlot(): Int {
-        return 0
+        return 8
     }
 }

@@ -1,19 +1,18 @@
 package test.test.utils.items
 
-import test.test.builder.ItemBuilder
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack
+import test.test.builder.ItemBuilder
 import test.test.provider.HotbarItem
 
-class ItemGadgets : HotbarItem {
-
+class ItemHidePlayer : HotbarItem {
     override fun build(): ItemStack {
-        val itemBuilder = ItemBuilder(Material.CHEST)
-        itemBuilder.setDisplayName("§eGadgets")
+        val itemBuilder = ItemBuilder(Material.STICK)
+        itemBuilder.setDisplayName("§bSpieler verstecken")
         return itemBuilder.build()
     }
 
     override fun getSlot(): Int {
-        return 7
+        return 1
     }
 }

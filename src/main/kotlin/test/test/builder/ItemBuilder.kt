@@ -3,6 +3,7 @@ package test.test.builder
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack
 import org.bukkit.inventory.meta.ItemMeta
+import org.bukkit.inventory.meta.SkullMeta
 
 class ItemBuilder constructor(private val material: Material, private val amount: Int) {
 

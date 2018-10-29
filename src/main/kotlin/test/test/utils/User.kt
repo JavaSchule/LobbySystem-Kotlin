@@ -2,6 +2,7 @@ package test.test.utils
 
 import org.bukkit.entity.Player
 import  test.test.LobbyPlugin;
+import java.lang.Exception
 import java.util.*
 
 class User constructor(val user: Player) {
@@ -10,13 +11,18 @@ class User constructor(val user: Player) {
 
     fun setHotbar() {
         for (i in 0..lobbyPlugin.itemList.size) {
-            user.inventory.setItem(lobbyPlugin.itemList[i].getSlot(), lobbyPlugin.itemList[i].build())
+            try {
+                user.inventory.setItem(lobbyPlugin.itemList[i].getSlot(), lobbyPlugin.itemList[i].build())
+            } catch (exception: Exception) {
+                exception.stackTrace
+            }
         }
     }
 
     fun clearContents() {
         this.user.inventory.armorContents = null
         this.user.foodLevel = 20
+        this.user.health = 20.0
     }
 
     fun setDefaultParameter() {
