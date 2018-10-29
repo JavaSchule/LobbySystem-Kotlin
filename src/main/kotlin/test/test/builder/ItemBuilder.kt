@@ -1,4 +1,4 @@
-package builder
+package test.test.builder
 
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack

@@ -1,15 +1,23 @@
-import listener.block.ListenerBlockInteract
-import listener.entity.ListenerEntityConnection
-import org.bukkit.event.Listener
+package test.test
+
+import test.test.listener.block.ListenerBlockInteract
+import test.test.listener.entity.ListenerEntityConnection
 import org.bukkit.plugin.java.JavaPlugin
-import provider.HotbarItem
-import utils.items.ItemCompass
-import utils.items.ItemGadgets
+import test.test.provider.HotbarItem
+import test.test.utils.items.ItemCompass
+import test.test.utils.items.ItemGadgets
 
 class LobbyPlugin : JavaPlugin() {
+
+    companion object {
+        lateinit var lobbyPlugin: LobbyPlugin
+    }
+
     var itemList: ArrayList<HotbarItem> = ArrayList()
 
     override fun onEnable() {
+        lobbyPlugin = this
+
         this.registerListener()
         this.registerItems()
     }

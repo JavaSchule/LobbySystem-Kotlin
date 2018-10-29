@@ -1,4 +1,4 @@
 author: ByteException
 name: Lobby
 version: 1.0
-main: LobbyPlugin
+main: test.test.LobbyPlugin
