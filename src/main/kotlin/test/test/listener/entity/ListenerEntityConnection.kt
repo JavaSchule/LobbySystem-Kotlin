@@ -5,6 +5,7 @@ import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.event.player.PlayerKickEvent
 import org.bukkit.event.player.PlayerQuitEvent
+import test.test.builder.ScoreboardBuilder
 import test.test.utils.User
 
 class ListenerEntityConnection : Listener {
@@ -18,6 +19,11 @@ class ListenerEntityConnection : Listener {
         user.clearContents()
         user.setHotbar()
         user.setDefaultParameter()
+
+        val scoreboardBuilder = ScoreboardBuilder("§bTest")
+        scoreboardBuilder.setScore("§bhaha")
+        scoreboardBuilder.setScore("§ctest")
+        scoreboardBuilder.build(player)
     }
 
     @EventHandler
